@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var path = require("path");
 
 module.exports = function(app) {
@@ -12,3 +13,20 @@ module.exports = function(app) {
   });
 
 };
+=======
+const friends = require("../data/friends")
+
+module.exports = function(app){  app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "home.html"));
+  });
+  
+  app.get("/survey", function(req, res) {
+    res.sendFile(path.join(__dirname, "survey.html"));
+  });
+
+app.get("/api/friends", function(req, res) {
+    console.log("score a direct hit")
+    return res.json(friends());
+  });
+}
+>>>>>>> 5da9fca25e5d6f316ebc9aa04666516f7d6cc0fb

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var friends = require("../data/friends");
 
 // ROUTING
@@ -8,11 +7,6 @@ module.exports = function(app) {
   app.get("/api/friends", function(req, res) {
     res.json(friends);
   });
-=======
-module.exports = function(app){app.get("api/friends", function(req, res) {
-    return res.json(friends);
-  });}
->>>>>>> 5da9fca25e5d6f316ebc9aa04666516f7d6cc0fb
 
 
   app.post("/api/friends", function(req, res) {
